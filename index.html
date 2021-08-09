@@ -39,7 +39,7 @@
 <form id="myForm" action="https://sheetdb.io/api/v1/rv1dl3h9j8xnc" method="POST">
     <div>
         <h4><label> Verify registered email:</label>
-            <input name="data[email]" class='input-email' required></h4>
+            <input name="data[email]" class='input-email' type="email" required></h4>
     </div>
     <h4><br><label>First project: </label>
         <select id="coya" name="data[projecta]" required="">
@@ -48,7 +48,7 @@
                 <option value="FaceBook">FaceBook</option>
                 <option value="Apple">Apple</option>
             </select><br><label>Amount to invest in first project: </label>
-        <input type="text" id="amounta" class="input-f" name="data[amounta]" required></h4>
+        <input type="number" id="amounta" class="input-f" name="data[amounta]" required></h4>
     <h4><br><label>Second project: </label>
         <select id="coyb" name="data[projectb]" required>
                 <option value="">choose...</option>
@@ -56,7 +56,7 @@
                 <option value="FaceBook">FaceBook</option>
                 <option value="Apple">Apple</option>
             </select><br><label>Amount to invest in second project: </label>
-        <input type="text" id="amountb" class="input-s" name="data[amountb]" required></h4>
+        <input type="number" id="amountb" class="input-s" name="data[amountb]" required></h4>
     <h4><br><label>Third project: </label>
         <select id="coyc" name="data[projectc]" required>
                 <option value="">choose...</option>
@@ -64,7 +64,7 @@
                 <option value="FaceBook">FaceBook</option>
                 <option value="Apple">Apple</option>
             </select><br><label>Amount to invest in third project: </label>         
-        <input type="text" id="amountc" class="input-t" name="data[amountc]" required></h4>
+        <input type="number" id="amountc" class="input-t" name="data[amountc]" required></h4>
          <br>
     <button type="submit" class="btn-primary">Submit Investment</button>
 </form>
@@ -77,18 +77,52 @@
 
 <script>
     var form = document.getElementById('myForm');
-    form.addEventListener("submit", e => {
+     form.addEventListener("submit", e => {
       e.preventDefault();
+
+      var firstProjectSelectOption = document.getElementById('coya').value;
+      var secondProjectSelectOption = document.getElementById('coyb').value;
+      var thirdProjectSelectOption = document.getElementById('coyc').value;
       var val1 = document.getElementById('amounta').value;
       var val2 = document.getElementById('amountb').value;
       var val3 = document.getElementById('amountc').value;
       var total = Number(val1)+ Number(val2)+ Number(val3);
       console.log('total==>',total)
-      if(total < 2000000 || total > 2000000 ){
-          alert('Amount should be equal to 2 Million');
-          return false;
+    
+      var projectValues = [firstProjectSelectOption,secondProjectSelectOption,thirdProjectSelectOption];
+
+      console.log(JSON.stringify(projectValues));
+
+      var projectValueAlreadyExists = false;
+      var errorMessages = [];
+
+      //check the project name values
+      for(var i = 0; i< projectValues.length;i++){
+        for(var j = i + 1; j< projectValues.length;j++){
+            console.log("comparing values:"+projectValues[i]+projectValues[j]);
+            if(projectValues[i] === projectValues[j]){
+                console.log(projectValues[i] + "already exists");
+                errorMessages.push(projectValues[i] + "already exists");
+                break;
+            }
+        }
+        if(errorMessages.length !== 0 ){
+            break;
+        }
       }
-      if(total == 2000000){
+
+    
+       //check the total project amount
+      if(total !== 2000000 ){
+        errorMessages.push('Amount should be equal to 2 Million');         
+      }
+
+
+      if(errorMessages.length !== 0 ){
+        for(var i=0;i<errorMessages.length;i++){
+            alert(errorMessages[i]);
+        }
+      }else{
         fetch(form.action, {
           method : "POST",
           body: new FormData(document.getElementById("myForm")),
@@ -99,6 +133,8 @@
     
       });
       }
+
+      
 
     });
     
