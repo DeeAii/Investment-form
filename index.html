@@ -33,40 +33,40 @@
 
 <div class="form-section">
 
-<h1 class="heading">Investment in Cross-border Project</h1>
+<!--<h1 class="heading">Investment in Cross-border Project</h1> -->
+<img src="investbanner.png" class="center" >
 
 <form id="myForm" action="https://sheetdb.io/api/v1/rv1dl3h9j8xnc" method="POST">
     <div>
-        <h4><label> Verify registered email</label>
+        <h4><label> Verify registered email:</label>
             <input name="data[email]" class='input-email' required></h4>
     </div>
-    <h4><br><label>First Project: </label>
+    <h4><br><label>First project: </label>
         <select id="coya" name="data[projecta]" required="">
                 <option value="">choose...</option>
                 <option value="Google">Google</option>
                 <option value="FaceBook">FaceBook</option>
                 <option value="Apple">Apple</option>
-            </select><br><label>Amount to Invest in First Project: </label>
+            </select><br><label>Amount to invest in first project: </label>
         <input type="text" id="amounta" class="input-f" name="data[amounta]" required></h4>
-    <h4><br><label>Second Project: </label>
+    <h4><br><label>Second project: </label>
         <select id="coyb" name="data[projectb]" required>
                 <option value="">choose...</option>
                 <option value="Google">Google</option>
                 <option value="FaceBook">FaceBook</option>
                 <option value="Apple">Apple</option>
-            </select><br><label>Amount to Invest in Second Project: </label>
+            </select><br><label>Amount to invest in second project: </label>
         <input type="text" id="amountb" class="input-s" name="data[amountb]" required></h4>
-    <h4><br><label>Third Project: </label>
+    <h4><br><label>Third project: </label>
         <select id="coyc" name="data[projectc]" required>
                 <option value="">choose...</option>
                 <option value="Google">Google</option>
                 <option value="FaceBook">FaceBook</option>
                 <option value="Apple">Apple</option>
-            </select><br><label>Amount to Invest in Third Project: </label>
+            </select><br><label>Amount to invest in third project: </label>         
         <input type="text" id="amountc" class="input-t" name="data[amountc]" required></h4>
-    <button type="submit" class="btn-primary">Invest Now</button>
-
-
+         <br>
+    <button type="submit" class="btn-primary">Submit Investment</button>
 </form>
 </div>
 </div>    
@@ -82,7 +82,7 @@
       var val1 = document.getElementById('amounta').value;
       var val2 = document.getElementById('amountb').value;
       var val3 = document.getElementById('amountc').value;
-      var total = Number( val1)+ Number(val2)+ Number(val3);
+      var total = Number(val1)+ Number(val2)+ Number(val3);
       console.log('total==>',total)
       if(total < 2000000 || total > 2000000 ){
           alert('Amount should be equal to 2 Million');
@@ -95,8 +95,7 @@
       }).then(
           response => response.json()
       ).then((html) => {
-        window.location.reload();
-        alert('Investment data has been submit');
+        window.location.href="thankyou.html";
     
       });
       }
