@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+    <link rel="stylesheet" href="style.css">
+    <title>Investment</title>
+</head>
+<body>
+    
+    <div id="preloader"> 
+
+        <div id="loader">	   
+        <div class="sk-cube-grid">
+    <div class="sk-cube sk-cube1"></div>
+    <div class="sk-cube sk-cube2"></div>
+    <div class="sk-cube sk-cube3"></div>
+    <div class="sk-cube sk-cube4"></div>
+    <div class="sk-cube sk-cube5"></div>
+    <div class="sk-cube sk-cube6"></div>
+    <div class="sk-cube sk-cube7"></div>
+    <div class="sk-cube sk-cube8"></div>
+    <div class="sk-cube sk-cube9"></div>
+    </div>
+        </div>
+      </div>
+<div class="main">
+
+<div class="form-section">
+
+<h1 class="heading">Investment in Cross-border Project</h1>
+
+<form id="myForm" action="https://sheetdb.io/api/v1/rv1dl3h9j8xnc" method="POST">
+    <div>
+        <h4><label> Verify registered email</label>
+            <input name="data[email]" class='input-email' required></h4>
+    </div>
+    <h4><br><label>First Project: </label>
+        <select id="coya" name="data[projecta]" required="">
+                <option value="">choose...</option>
+                <option value="Google">Google</option>
+                <option value="FaceBook">FaceBook</option>
+                <option value="Apple">Apple</option>
+            </select><br><label>Amount to Invest in First Project: </label>
+        <input type="text" id="amounta" class="input-f" name="data[amounta]" required></h4>
+    <h4><br><label>Second Project: </label>
+        <select id="coyb" name="data[projectb]" required>
+                <option value="">choose...</option>
+                <option value="Google">Google</option>
+                <option value="FaceBook">FaceBook</option>
+                <option value="Apple">Apple</option>
+            </select><br><label>Amount to Invest in Second Project: </label>
+        <input type="text" id="amountb" class="input-s" name="data[amountb]" required></h4>
+    <h4><br><label>Third Project: </label>
+        <select id="coyc" name="data[projectc]" required>
+                <option value="">choose...</option>
+                <option value="Google">Google</option>
+                <option value="FaceBook">FaceBook</option>
+                <option value="Apple">Apple</option>
+            </select><br><label>Amount to Invest in Third Project: </label>
+        <input type="text" id="amountc" class="input-t" name="data[amountc]" required></h4>
+    <button type="submit" class="btn-primary">Invest Now</button>
+
+
+</form>
+</div>
+</div>    
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+<script>
+    var form = document.getElementById('myForm');
+    form.addEventListener("submit", e => {
+      e.preventDefault();
+      var val1 = document.getElementById('amounta').value;
+      var val2 = document.getElementById('amountb').value;
+      var val3 = document.getElementById('amountc').value;
+      var total = Number( val1)+ Number(val2)+ Number(val3);
+      console.log('total==>',total)
+      if(total < 2000000 || total > 2000000 ){
+          alert('Amount should be equal to 2 Million');
+          return false;
+      }
+      if(total == 2000000){
+        fetch(form.action, {
+          method : "POST",
+          body: new FormData(document.getElementById("myForm")),
+      }).then(
+          response => response.json()
+      ).then((html) => {
+        window.location.reload();
+        alert('Investment data has been submit');
+    
+      });
+      }
+
+    });
+    
+    function showSite(){
+        $('#loader').fadeOut(); // will first fade out the loading animation 
+        $('#preloader').delay(60).fadeOut('slow'); // will fade out the white DIV that covers the website. 
+        $('body').delay(60).css({'overflow':'visible'});
+  }
+      $(window).on('load', function() { // makes sure the whole site is loaded 
+      setTimeout(function(){ showSite() }, 1000);
+      })
+            
+  </script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</body>
+</html>
