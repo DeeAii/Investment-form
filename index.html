@@ -136,7 +136,7 @@
         for(var j = i + 1; j< projectValues.length;j++){
             console.log("comparing values:"+projectValues[i]+projectValues[j]);
             if(projectValues[i] === projectValues[j]){
-                console.log(projectValues[i] + "already exists");
+                console.log(projectValues[i] + "  can't be selected more than once");
                 errorMessages.push(projectValues[i] + " can't be selected more than once");
                 break;
             }
