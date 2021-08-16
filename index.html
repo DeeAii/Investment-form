@@ -190,7 +190,27 @@
       if(total !== 2000000 ){
         errorMessages.push('Amount should be equal to 2 Million');         
       }
+      if (val1 < 0) {
+      errorMessages.push('Amount in first investment must be positive');         
+      }
+      if (val2 < 0) {
+      errorMessages.push('Amount in second investment must be positive');         
+      }
+      if (val3 < 0) {
+      errorMessages.push('Amount in second investment must be positive');         
+      }
 
+      if (firstProjectSelectOption == "") {
+      errorMessages.push('you must select a value in the first Project');         
+      }
+
+      if (secondProjectSelectOption == "") {
+      errorMessages.push('you must select a value in the second Project');         
+      }
+
+      if (thirdProjectSelectOption == "") {
+      errorMessages.push('you must select a value in the third Project');         
+      }
 
       if(errorMessages.length !== 0 ){
         for(var i=0;i<errorMessages.length;i++){
