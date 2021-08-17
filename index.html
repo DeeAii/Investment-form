@@ -184,37 +184,32 @@
             break;
         }
       }
-      if (!field1.length && !field2.length) {
-    return false;
-}
-      if (!val1 >= 0 && !firstProjectSelectOption == "") {
-    errorMessages.push('you must select a value in the first Project');         
+    
+      //verify if a project name is selected
+      if (val1 !== null && firstProjectSelectOption == "") {
+        errorMessages.push('you have not selected the first project name'); 
     }
-
-    if (!val2 >= 0 && !secondProjectSelectOption == "") {
-    errorMessages.push('you must select a value in the second Project');         
+    if (val2 !== null && secondProjectSelectOption == "") {
+        errorMessages.push('you have not selected the second project name'); 
     }
-
-    if (!val3 >= 0 && !thirdProjectSelectOption == "") {
-    errorMessages.push('you must select a value in the third Project');         
+    if (val3 !== null && thirdProjectSelectOption == "") {
+        errorMessages.push('you have not selected the third project name'); 
     }
     
+       //check the each project greater than 0 
+      if (val1 < 0) {
+      errorMessages.push('Amount in first investment must be a positive number');         
+      }
+      if (val2 < 0) {
+      errorMessages.push('Amount in second investment must be a positive number');         
+      }
+      if (val3 < 0) {
+      errorMessages.push('Amount in third investment must be a positive number');         
+      }
        //check the total project amount
-      if(total !== 2000000 ){
+       if(total !== 2000000 ){
         errorMessages.push('Amount should be equal to 2 Million');         
       }
-       //check the each project greater than 0 
-      if (val1 <= 0) {
-      errorMessages.push('Amount in first investment must be greater than 0');         
-      }
-      if (val2 <= 0) {
-      errorMessages.push('Amount in second investment must be greater than 0');         
-      }
-      if (val3 <= 0) {
-      errorMessages.push('Amount in third investment must be greater than 0');         
-      }
-
-
       if(errorMessages.length !== 0 ){
         for(var i=0;i<errorMessages.length;i++){
             alert(errorMessages[i]);
