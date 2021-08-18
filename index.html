@@ -8,12 +8,15 @@
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
   />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <link rel="stylesheet" href="style.css">
     <title>CBLV Invest Tool</title>
 </head>
 <body>
     
-    <div id="preloader"> 
+    <!-- <div id="preloader"> 
 
         <div id="loader">    
         <div class="sk-cube-grid">
@@ -28,7 +31,7 @@
     <div class="sk-cube sk-cube9"></div>
     </div>
         </div>
-      </div>
+      </div> -->
 <div class="main">
 
 <div class="form-section">
@@ -67,76 +70,147 @@
 </div>
 
 
+<!-- <form id="myForm" action="https://sheetdb.io/api/v1/g16rjzl2k1ife" method="POST"> -->
 <form id="myForm" action="https://sheetdb.io/api/v1/rv1dl3h9j8xnc" method="POST">
-    <div>
-        <h4><label> Verify registered email:</label>
-            <input name="data[email]" class='input-email' type="email" required></h4>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-6 text-email">
+                Verify registered email
+            </div>
+            <div class="col-sm-12 col-md-12 col-lg-6">
+                <input name="data[email]" class='input-email' type="email" required>
+
+            </div>
+
+        </div>
     </div>
-    <h4><br><label>First project: </label>
-        <select id="coya" name="data[projecta]" required="">
-                <option value="">choose...</option>
-                <option value="ProjectA">Project A</option>
-                <option value="ProjectB">Project B</option>
-                <option value="ProjectC">Project C</option>
-                <option value="ProjectD">Project D</option>
-                <option value="ProjectE">Project E</option>
-                <option value="ProjectF">Project F</option>
-                <option value="ProjectG">Project G</option>
-                <option value="ProjectH">Project H</option>
-                <option value="ProjectI">Project I</option>
-                <option value="ProjectJ">Project J</option>
-                <option value="ProjectK">Project K</option>
-                <option value="ProjectL">Project L</option>
-                <option value="ProjectM">Project M</option>
-                <option value="ProjectN">Project N</option>
 
-            </select><br><label>Amount to invest in first project: </label>
-        <input type="number" id="amounta" class="input-f" name="data[amounta]" required></h4>
-    <h4><br><label>Second project: </label>
-        <select id="coyb" name="data[projectb]" >
-                <option value="">choose...</option>
-                <option value="ProjectA">Project A</option>
-                <option value="ProjectB">Project B</option>
-                <option value="ProjectC">Project C</option>
-                <option value="ProjectD">Project D</option>
-                <option value="ProjectE">Project E</option>
-                <option value="ProjectF">Project F</option>
-                <option value="ProjectG">Project G</option>
-                <option value="ProjectH">Project H</option>
-                <option value="ProjectI">Project I</option>
-                <option value="ProjectJ">Project J</option>
-                <option value="ProjectK">Project K</option>
-                <option value="ProjectL">Project L</option>
-                <option value="ProjectM">Project M</option>
-                <option value="ProjectN">Project N</option>
+        <div class="container">
+            <div class="row pro1">
+                <div class="col-sm-12 col-md-12 col-lg-6">
+                    
+                    <select class="" id="coya" name="data[projecta]" required="">
+                        <option value="">choose A</option>
+                        <option value="ProjectA">Project A</option>
+                        <option value="ProjectB">Project B</option>
+                        <option value="ProjectC">Project C</option>
+                        <option value="ProjectD">Project D</option>
+                        <option value="ProjectE">Project E</option>
+                        <option value="ProjectF">Project F</option>
+                        <option value="ProjectG">Project G</option>
+                        <option value="ProjectH">Project H</option>
+                        <option value="ProjectI">Project I</option>
+                        <option value="ProjectJ">Project J</option>
+                        <option value="ProjectK">Project K</option>
+                        <option value="ProjectL">Project L</option>
+                        <option value="ProjectM">Project M</option>
+                        <option value="ProjectN">Project N</option>
+                        </select>
+                </div>
+                <div class="col-sm-12 col-md-12 col-lg-6 pro1-input-email">
+               <i class="fa fa-usd" aria-hidden="true"></i>
 
-            </select><br><label>Amount to invest in second project: </label>
-        <input type="number" id="amountb" class="input-s" name="data[amountb]" ></h4>
-    <h4><br><label>Third project: </label>
-        <select id="coyc" name="data[projectc]" >
-                <option value="">choose...</option>
-                <option value="ProjectA">Project A</option>
-                <option value="ProjectB">Project B</option>
-                <option value="ProjectC">Project C</option>
-                <option value="ProjectD">Project D</option>
-                <option value="ProjectE">Project E</option>
-                <option value="ProjectF">Project F</option>
-                <option value="ProjectG">Project G</option>
-                <option value="ProjectH">Project H</option>
-                <option value="ProjectI">Project I</option>
-                <option value="ProjectJ">Project J</option>
-                <option value="ProjectK">Project K</option>
-                <option value="ProjectL">Project L</option>
-                <option value="ProjectM">Project M</option>
-                <option value="ProjectN">Project N</option>
-            </select><br><label>Amount to invest in third project: </label>         
-        <input type="number" id="amountc" class="input-t" name="data[amountc]" ></h4>
+                    <input type="number" min="0" id="amounta" onchange="checkVal1(this.value)" class="input-f" name="data[amounta]" required>
+                </div>
+            </div>
+        </div>
+        
+       <div class="container" id="second">
+           <div class="row pro2">
+               <div class="col-sm-12 col-md-12 col-lg-6">
+
+                <select id="coyb" name="data[projectb]" >
+                    <option value="">choose B</option>
+                    <option value="ProjectA">Project A</option>
+                    <option value="ProjectB">Project B</option>
+                    <option value="ProjectC">Project C</option>
+                    <option value="ProjectD">Project D</option>
+                    <option value="ProjectE">Project E</option>
+                    <option value="ProjectF">Project F</option>
+                    <option value="ProjectG">Project G</option>
+                    <option value="ProjectH">Project H</option>
+                    <option value="ProjectI">Project I</option>
+                    <option value="ProjectJ">Project J</option>
+                    <option value="ProjectK">Project K</option>
+                    <option value="ProjectL">Project L</option>
+                    <option value="ProjectM">Project M</option>
+                    <option value="ProjectN">Project N</option>
+                    </select>
+               </div>
+               <div class="col-sm-12 col-md-12 col-lg-6 pro1-input-email">
+               <i class="fa fa-usd" aria-hidden="true"></i>
+
+                       <input type="number" min="0" onchange="checkVal2(this.value)" id="amountb" class="input-f" name="data[amountb]" >
+               </div>
+           </div>
+       </div>
+       
+       
+       
+            <div class="container" id="third">
+                <div class="row pro3">
+                    <div class="col-sm-12 col-md-12 col-lg-6">
+                        <select id="coyc" name="data[projectc]" >
+                            <option value="">choose C</option>
+                            <option value="ProjectA">Project A</option>
+                            <option value="ProjectB">Project B</option>
+                            <option value="ProjectC">Project C</option>
+                            <option value="ProjectD">Project D</option>
+                            <option value="ProjectE">Project E</option>
+                            <option value="ProjectF">Project F</option>
+                            <option value="ProjectG">Project G</option>
+                            <option value="ProjectH">Project H</option>
+                            <option value="ProjectI">Project I</option>
+                            <option value="ProjectJ">Project J</option>
+                            <option value="ProjectK">Project K</option>
+                            <option value="ProjectL">Project L</option>
+                            <option value="ProjectM">Project M</option>
+                            <option value="ProjectN">Project N</option>
+                            </select>
+                    </div>
+                    <div class="col-sm-12 col-md-12 col-lg-6 pro1-input-email">
+                       <i class="fa fa-usd" aria-hidden="true"></i>
+
+                        <input type="number" min="0" id="amountc"   onchange="checkVal3(this.value)" class="input-f" name="data[amountc]" >
+                    </div>
+                </div>
+            </div>
+
+            <div class="plus_icon"  >
+                <div class="plus_icon_box" onclick="addRow()"id="add_btn" >
+                    <i class="fa fa-plus"></i>
+                </div>
+             </div>
+    
+
+             <div class="first_project_1">
+                <div class="first_project_1_1">
+                    Allocated Amount
+                </div>
+                <div class="first_project_1_2" id="first_project_1_2">
+                   $ 0
+                </div>
+        </div>
+        <div class="first_project_2">
+            <div class="first_project_2_1">
+              Remaining amount available for allocation
+            </div>
+            <div class="first_project_2_2" id="first_project_2_2">
+               $ 2,000,000
+            </div>
+    </div>
+    
          <br>
-    <button type="submit" class="btn-primary">Submit Investment</button>
+
+         <div class="submit_btn">
+            <button type="submit" class="btn-primary" id="btn-primary" >Submit Investment</button>
+    </div>
+    
     <br>
     <br>
 
-    <div><a href="https://datastudio.google.com/u/1/reporting/fd890c97-1455-4d87-ba43-d4067eb4f93c/page/OdPXC" target="_blank">View the live CBLV Project Showcase investment dashboard</a>
+    <div class="last-txt"><a href="https://datastudio.google.com/u/1/reporting/fd890c97-1455-4d87-ba43-d4067eb4f93c/page/OdPXC" target="_blank">View the live CBLV Project Showcase investment dashboard</a>
 </div>
 </form>
 </div>
@@ -150,6 +224,105 @@
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 
 <script>
+
+document.getElementById('second').style.display = 'none';
+document.getElementById('third').style.display = 'none';
+var sum = 0;
+document.getElementById('btn-primary').disabled = true;
+document.getElementById('btn-primary').style.backgroundColor='lightgrey';
+function checkVal1(value){
+          var f2 = document.getElementById('amountb');
+          var f3 = document.getElementById('amountc');
+    if(value >= 0 && value <= 2000000){
+              
+          if(parseInt(f2.value) > 0){
+            document.getElementById('first_project_1_2').innerHTML = parseInt(f2.value) + parseInt(value);
+            document.getElementById('first_project_2_2').innerHTML = 2000000 - parseInt(f2.value) - parseInt(value) ;
+        
+        }
+          if(parseInt(f3.value) > 0){
+            document.getElementById('first_project_1_2').innerHTML = parseInt(f2.value) +  parseInt(f3.value)  + parseInt(value);
+            document.getElementById('first_project_2_2').innerHTML = 2000000 - parseInt(f2.value) -  parseInt(f3.value) - parseInt(value);
+          
+        }
+          else{
+            document.getElementById('first_project_1_2').innerHTML = parseInt(value);
+            document.getElementById('first_project_2_2').innerHTML = 2000000 - parseInt(value);  
+        }
+
+        }
+        else{
+        alert('You need to enter the value in range');
+    }
+}
+
+function checkVal2(value){
+    if(value >= 0 && value <= 2000000){
+            var f1 = document.getElementById('amounta');
+            var f3 = document.getElementById('amountc');
+            if(parseInt(f1.value) > 0){
+             document.getElementById('first_project_1_2').innerHTML = parseInt(f1.value) + parseInt(value);
+             document.getElementById('first_project_2_2').innerHTML = 2000000 - parseInt(f1.value) - parseInt(value);  
+         
+            }
+          if(parseInt(f3.value) > 0){
+            document.getElementById('first_project_1_2').innerHTML = parseInt(f1.value) + parseInt(f3.value) + parseInt(value);
+            document.getElementById('first_project_2_2').innerHTML = 2000000 - parseInt(f1.value) - parseInt(f3.value) - parseInt(value);  
+        
+        }
+    }
+    else{
+        alert('You need to enter the value in range');
+    }
+}
+
+function checkVal3(value){
+    if(value >= 0 && value <= 2000000){
+        var f1 = document.getElementById('amounta');
+        var f2 = document.getElementById('amountb');
+        // if(parseInt(f1.value) > 0){
+        //     document.getElementById('first_project_1_2').innerHTML = parseInt(f1.value) + parseInt(f3.value) + parseInt(value);
+        //   }
+        //   if(parseInt(f3.value) > 0){
+        //     document.getElementById('first_project_1_2').innerHTML = parseInt(f1.value) + parseInt(f3.value) + parseInt(value);
+        //   }
+        document.getElementById('first_project_1_2').innerHTML = parseInt(f1.value)+ parseInt(f2.value) +parseInt(value);
+        document.getElementById('first_project_2_2').innerHTML = 2000000 - parseInt(f1.value)- parseInt(f2.value) -parseInt(value);  
+   
+    }
+    else{
+        alert('You need to enter the value in range');
+    }
+}
+
+function addRow(){
+    document.getElementById('second').style.display = 'block';
+    document.getElementById("add_btn").setAttribute("onclick", "addSecondRow()");
+}
+
+function addSecondRow() {
+        document.getElementById('third').style.display = 'block';
+}
+
+
+
+setInterval(function(){
+var checkBtn = document.getElementById('first_project_2_2');
+ if(checkBtn.innerHTML == '0'){
+    document.getElementById('btn-primary').disabled = false;
+document.getElementById('btn-primary').style.backgroundColor='red';
+ }
+     },
+10);
+setInterval(function(){
+var checkBtn = document.getElementById('first_project_2_2');
+ if(parseInt (checkBtn.innerHTML) > 0){
+    document.getElementById('btn-primary').disabled = true;
+document.getElementById('btn-primary').style.backgroundColor='lightgrey';
+ }
+     },
+10);
+           
     var form = document.getElementById('myForm');
      form.addEventListener("submit", e => {
       e.preventDefault();
@@ -165,7 +338,6 @@
     
       var projectValues = [firstProjectSelectOption,secondProjectSelectOption,thirdProjectSelectOption];
 
-      console.log(JSON.stringify(projectValues));
 
       var projectValueAlreadyExists = false;
       var errorMessages = [];
@@ -184,17 +356,6 @@
             break;
         }
       }
-    
-      //verify if a project name is selected
-      if (val1 !== null && firstProjectSelectOption == "") {
-        errorMessages.push('you have not selected the first project name'); 
-    }
-    if (val2 !== null && secondProjectSelectOption == "") {
-        errorMessages.push('you have not selected the second project name'); 
-    }
-    if (val3 !== null && thirdProjectSelectOption == "") {
-        errorMessages.push('you have not selected the third project name'); 
-    }
     
        //check the each project greater than 0 
       if (val1 < 0) {
@@ -221,8 +382,8 @@
       }).then(
           response => response.json()
       ).then((html) => {
+          alert('Data has been submit')
         window.location.href="https://www.canva.com/design/DAEmlAMISQ8/n2Z7ArhIw8-VwQR7kqC-sg/view";
-    
       });
       }
     });
