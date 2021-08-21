@@ -294,14 +294,24 @@ function checkVal3(value){
         alert('You need to enter the value in range');
     }
 }
+        document.getElementById('amountb').disabled = true;
+        document.getElementById('amountc').disabled = true;
+    document.getElementById('coyb').disabled = true;
+    document.getElementById('coyc').disabled = true;
 
+var trigger = false;
 function addRow(){
     document.getElementById('second').style.display = 'block';
     document.getElementById("add_btn").setAttribute("onclick", "addSecondRow()");
+    document.getElementById('amountb').disabled = false;
+    document.getElementById('coyb').disabled = false;
+    trigger = true
 }
 
 function addSecondRow() {
         document.getElementById('third').style.display = 'block';
+        document.getElementById('amountc').disabled = false;
+        document.getElementById('coyc').disabled = false;
 }
 
 
@@ -310,7 +320,7 @@ setInterval(function(){
 var checkBtn = document.getElementById('first_project_2_2');
  if(checkBtn.innerHTML == '0'){
     document.getElementById('btn-primary').disabled = false;
-document.getElementById('btn-primary').style.backgroundColor='red';
+    document.getElementById('btn-primary').style.backgroundColor='red';
  }
      },
 10);
@@ -323,7 +333,21 @@ document.getElementById('btn-primary').style.backgroundColor='lightgrey';
      },
 10);
            
+
+function resetValues(){
+    document.getElementById('amounta').value = 0;
+    document.getElementById('amountb').value = 0;
+    document.getElementById('amountc').value = 0;
+    document.getElementById('input_email').value = '';
+
+    document.getElementById('first_project_1_2').innerHTML = '$ 0';
+   document.getElementById('first_project_2_2').innerHTML = '$ 2,000,000';
+   document.getElementById('btn-primary').disabled = true;
+    document.getElementById('btn-primary').style.backgroundColor='grey';
+
+}
     var form = document.getElementById('myForm');
+   
      form.addEventListener("submit", e => {
       e.preventDefault();
 
@@ -334,47 +358,54 @@ document.getElementById('btn-primary').style.backgroundColor='lightgrey';
       var val2 = document.getElementById('amountb').value;
       var val3 = document.getElementById('amountc').value;
       var total = Number(val1)+ Number(val2)+ Number(val3);
-      console.log('total==>',total)
     
-      var projectValues = [firstProjectSelectOption,secondProjectSelectOption,thirdProjectSelectOption];
+      var projectValues = [secondProjectSelectOption,thirdProjectSelectOption];
 
 
       var projectValueAlreadyExists = false;
       var errorMessages = [];
 
-      //check the project name values
-      for(var i = 0; i< projectValues.length;i++){
-        for(var j = i + 1; j< projectValues.length;j++){
-            console.log("comparing values:"+projectValues[i]+projectValues[j]);
-            if(projectValues[i] === projectValues[j]){
-                console.log(projectValues[i] + "  can not be selected more than once");
-                errorMessages.push(projectValues[i] + " can not be selected more than once");
-                break;
-            }
+      if(trigger === true){
+        if (firstProjectSelectOption === secondProjectSelectOption || secondProjectSelectOption === firstProjectSelectOption){
+          alert(`${firstProjectSelectOption} can not be selected twice`);
+          return false;
+      }
+      if (secondProjectSelectOption === thirdProjectSelectOption || thirdProjectSelectOption === secondProjectSelectOption){
+          alert(`${secondProjectSelectOption} can not be selected twice`)
+          return false;
+      
         }
-        if(errorMessages.length !== 0 ){
-            break;
+      if (firstProjectSelectOption === thirdProjectSelectOption || thirdProjectSelectOption === firstProjectSelectOption){
+          alert(`${firstProjectSelectOption} can not be selected twice`)
+          return false;
+      
         }
       }
+
+     
     
-       //check the each project greater than 0 
-      if (val1 < 0) {
-      errorMessages.push('Amount in first investment must be a positive number');         
-      }
-      if (val2 < 0) {
-      errorMessages.push('Amount in second investment must be a positive number');         
-      }
-      if (val3 < 0) {
-      errorMessages.push('Amount in third investment must be a positive number');         
-      }
-       //check the total project amount
+      var val3Check = document.getElementById('amountc').disabled ;
+      var val2Check = document.getElementById('amountb').disabled ;
+
+      if ( firstProjectSelectOption == "") {
+        alert('you have not selected the first project name');
+        return false;
+    }
+    if (val2Check  == false &&  secondProjectSelectOption == "") {
+        alert('you have not selected the second project name');
+        return false;
+
+    }
+       
+    if (val3Check == false && thirdProjectSelectOption == "") {
+        alert('you have not selected the third project name');
+        return false;
+
+    }
+        
        if(total !== 2000000 ){
         errorMessages.push('Amount should be equal to 2 Million');         
       }
-      if(errorMessages.length !== 0 ){
-        for(var i=0;i<errorMessages.length;i++){
-            alert(errorMessages[i]);
-        }
       }else{
         fetch(form.action, {
           method : "POST",
@@ -382,7 +413,13 @@ document.getElementById('btn-primary').style.backgroundColor='lightgrey';
       }).then(
           response => response.json()
       ).then((html) => {
-          alert('Data has been submit')
+          alert('Data has been submitted')
+          document.getElementById('amounta').value = 0;
+          document.getElementById('amountb').value = 0;
+          document.getElementById('amountc').value = 0;
+          document.getElementById('input_email').value = '';
+          document.getElementById('first_project_1_2').innerHTML = '$ 0';
+          document.getElementById('first_project_2_2').innerHTML = '$ 2,000,000'
         window.location.href="https://www.canva.com/design/DAEmlAMISQ8/n2Z7ArhIw8-VwQR7kqC-sg/view";
       });
       }
