@@ -293,10 +293,10 @@ input:focus {
   color: white;
 }
 .submit_btn {
-    display: flex;
+    /* display: flex;
     margin-left: auto;
     margin-right: 35px;
-    margin-top: 30px;
+    margin-top: 30px; */
 }
 
 #first,#second{
@@ -322,7 +322,9 @@ input:focus {
 
 
 
-
+.btn_wrapper{
+  text-align: center;
+}
 
 
 
@@ -346,7 +348,9 @@ input:focus {
 
 
 
-
+.from3 .frow{
+  margin-top: 25px;
+}
 @media(max-width:1220px){
   .input-email{
     position: relative;
@@ -400,6 +404,10 @@ input:focus {
   .input-email {
     position: relative;
     left: -49px;
+}
+.btn_wrapper{
+  position: relative;
+  left: -38px;
 }
 }
 @media(max-width:500px){
@@ -466,6 +474,10 @@ select{
   left: -35px;
   font-size: 11px;
 }
+.btn_wrapper{
+  position: relative;
+  left: -38px;
+}
 }
 
 @media(max-width:350px){
@@ -476,9 +488,19 @@ select{
     padding-right: 0px !important;
     padding-left: 0px !important;
 }
+.btn-primary {
+  width: 185px;
+}
+.btn_wrapper{
+  position: relative;
+  left: -27px;
+}
 }
 @media (max-width: 330px){
 .form-section {
     width: 90% !important;
 }
+}
+.reset{
+  background-color: red !important;
 }
