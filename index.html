@@ -70,89 +70,28 @@
 </div>
 
 
-<!-- <form id="myForm" action="https://sheetdb.io/api/v1/g16rjzl2k1ife" method="POST"> -->
+    <!-- <form id="myForm" action="https://sheetdb.io/api/v1/g16rjzl2k1ife" method="POST"> -->
 <form id="myForm" action="https://sheetdb.io/api/v1/rv1dl3h9j8xnc" method="POST">
-
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-12 col-md-12 col-lg-6 text-email">
-                Verify registered email
-            </div>
-            <div class="col-sm-12 col-md-12 col-lg-6">
-                <input name="data[email]" class='input-email' type="email" required>
-
-            </div>
-
-        </div>
-    </div>
-
+    
         <div class="container">
-            <div class="row pro1">
+            <div class="row">
+                <div class="col-sm-12 col-md-12 col-lg-6 text-email">
+                    Verify registered email
+                </div>
                 <div class="col-sm-12 col-md-12 col-lg-6">
-                    
-                    <select class="" id="coya" name="data[projecta]" required="">
-                        <option value="ProjectA not yet selected">choose A</option>
-                        <option value="ProjectA">Project A</option>
-                        <option value="ProjectB">Project B</option>
-                        <option value="ProjectC">Project C</option>
-                        <option value="ProjectD">Project D</option>
-                        <option value="ProjectE">Project E</option>
-                        <option value="ProjectF">Project F</option>
-                        <option value="ProjectG">Project G</option>
-                        <option value="ProjectH">Project H</option>
-                        <option value="ProjectI">Project I</option>
-                        <option value="ProjectJ">Project J</option>
-                        <option value="ProjectK">Project K</option>
-                        <option value="ProjectL">Project L</option>
-                        <option value="ProjectM">Project M</option>
-                        <option value="ProjectN">Project N</option>
-                        </select>
+                    <input name="data[email]" class='input-email' id="input_email" type="email" required>
+    
                 </div>
-                <div class="col-sm-12 col-md-12 col-lg-6 pro1-input-email">
-               <i class="fa fa-usd" aria-hidden="true"></i>
-
-                    <input type="number" min="0" id="amounta" onchange="checkVal1(this.value)" class="input-f" name="data[amounta]" required>
-                </div>
+    
             </div>
         </div>
-        
-       <div class="container" id="second">
-           <div class="row pro2">
-               <div class="col-sm-12 col-md-12 col-lg-6">
-
-                <select id="coyb" name="data[projectb]" >
-                    <option value="ProjectB not yet selected">choose B</option>
-                    <option value="ProjectA">Project A</option>
-                    <option value="ProjectB">Project B</option>
-                    <option value="ProjectC">Project C</option>
-                    <option value="ProjectD">Project D</option>
-                    <option value="ProjectE">Project E</option>
-                    <option value="ProjectF">Project F</option>
-                    <option value="ProjectG">Project G</option>
-                    <option value="ProjectH">Project H</option>
-                    <option value="ProjectI">Project I</option>
-                    <option value="ProjectJ">Project J</option>
-                    <option value="ProjectK">Project K</option>
-                    <option value="ProjectL">Project L</option>
-                    <option value="ProjectM">Project M</option>
-                    <option value="ProjectN">Project N</option>
-                    </select>
-               </div>
-               <div class="col-sm-12 col-md-12 col-lg-6 pro1-input-email">
-               <i class="fa fa-usd" aria-hidden="true"></i>
-
-                       <input type="number" min="0" onchange="checkVal2(this.value)" id="amountb" class="input-f" name="data[amountb]" >
-               </div>
-           </div>
-       </div>
-       
-       
-       
-            <div class="container" id="third">
-                <div class="row pro3">
+    
+            <div class="container">
+                <div class="row pro1">
                     <div class="col-sm-12 col-md-12 col-lg-6">
-                        <select id="coyc" name="data[projectc]" >
-                            <option value="projectc not yet selected">choose C</option>
+                        
+                        <select class="" id="coya" name="data[projecta]" >
+                            <option value="">choose A</option>
                             <option value="ProjectA">Project A</option>
                             <option value="ProjectB">Project B</option>
                             <option value="ProjectC">Project C</option>
@@ -170,60 +109,137 @@
                             </select>
                     </div>
                     <div class="col-sm-12 col-md-12 col-lg-6 pro1-input-email">
-                       <i class="fa fa-usd" aria-hidden="true"></i>
-
-                        <input type="number" min="0" id="amountc"   onchange="checkVal3(this.value)" class="input-f" name="data[amountc]" >
+                   <i class="fa fa-usd" aria-hidden="true"></i>
+    
+                        <input type="number" min="0" id="amounta" onchange="checkVal1(this.value)" class="input-f" name="data[amounta]" required>
                     </div>
                 </div>
             </div>
-
-            <div class="plus_icon"  >
-                <div class="plus_icon_box" onclick="addRow()"id="add_btn" >
-                    <i class="fa fa-plus"></i>
-                </div>
-             </div>
+            
+           <div class="container" id="second">
+               <div class="row pro2">
+                   <div class="col-sm-12 col-md-12 col-lg-6">
     
-
-             <div class="first_project_1">
-                <div class="first_project_1_1">
-                    Allocated Amount
+                    <select id="coyb" name="data[projectb]" >
+                        <option value="">choose B</option>
+                        <option value="ProjectA">Project A</option>
+                        <option value="ProjectB">Project B</option>
+                        <option value="ProjectC">Project C</option>
+                        <option value="ProjectD">Project D</option>
+                        <option value="ProjectE">Project E</option>
+                        <option value="ProjectF">Project F</option>
+                        <option value="ProjectG">Project G</option>
+                        <option value="ProjectH">Project H</option>
+                        <option value="ProjectI">Project I</option>
+                        <option value="ProjectJ">Project J</option>
+                        <option value="ProjectK">Project K</option>
+                        <option value="ProjectL">Project L</option>
+                        <option value="ProjectM">Project M</option>
+                        <option value="ProjectN">Project N</option>
+                        </select>
+                   </div>
+                   <div class="col-sm-12 col-md-12 col-lg-6 pro1-input-email">
+                   <i class="fa fa-usd" aria-hidden="true"></i>
+    
+                           <input type="number" min="0" onchange="checkVal2(this.value)" id="amountb" class="input-f" name="data[amountb]" required>
+                   </div>
+               </div>
+           </div>
+           
+           
+           
+                <div class="container" id="third">
+                    <div class="row pro3">
+                        <div class="col-sm-12 col-md-12 col-lg-6">
+                            <select id="coyc" name="data[projectc]" >
+                                <option value="">choose C</option>
+                                <option value="ProjectA">Project A</option>
+                                <option value="ProjectB">Project B</option>
+                                <option value="ProjectC">Project C</option>
+                                <option value="ProjectD">Project D</option>
+                                <option value="ProjectE">Project E</option>
+                                <option value="ProjectF">Project F</option>
+                                <option value="ProjectG">Project G</option>
+                                <option value="ProjectH">Project H</option>
+                                <option value="ProjectI">Project I</option>
+                                <option value="ProjectJ">Project J</option>
+                                <option value="ProjectK">Project K</option>
+                                <option value="ProjectL">Project L</option>
+                                <option value="ProjectM">Project M</option>
+                                <option value="ProjectN">Project N</option>
+                                </select>
+                        </div>
+                        <div class="col-sm-12 col-md-12 col-lg-6 pro1-input-email">
+                           <i class="fa fa-usd" aria-hidden="true"></i>
+    
+                            <input type="number" min="0" id="amountc"   onchange="checkVal3(this.value)" class="input-f" name="data[amountc]" required >
+                        </div>
+                    </div>
                 </div>
-                <div class="first_project_1_2" id="first_project_1_2">
-                   $ 0
+    
+                <div class="plus_icon"  >
+                    <div class="plus_icon_box" onclick="addRow()"id="add_btn" >
+                        <i class="fa fa-plus"></i>
+                    </div>
+                 </div>
+        
+    
+                 <div class="first_project_1">
+                    <div class="first_project_1_1">
+                        Allocated Amount
+                    </div>
+                    <div class="first_project_1_2" id="first_project_1_2">
+                       $ 0
+                    </div>
+            </div>
+            <div class="first_project_2">
+                <div class="first_project_2_1">
+                  Remaining amount available for allocation
+                </div>
+                <div class="first_project_2_2" id="first_project_2_2">
+                   $ 2,000,000
                 </div>
         </div>
-        <div class="first_project_2">
-            <div class="first_project_2_1">
-              Remaining amount available for allocation
-            </div>
-            <div class="first_project_2_2" id="first_project_2_2">
-               $ 2,000,000
-            </div>
+        
+             <br>
+                <div class="container btn_wrapper">
+                       <div class="row">
+                           <div class="col-lg-6 col-md-12 col-sm-12 submit_btn">
+                            <button type="submit" class="btn-primary" id="btn-primary" >Submit Investment</button>
+    
+                           </div>
+                           <div class="col-lg-6 col-md-12 col-sm-12">
+                            <button type="button" class="btn-primary reset" onclick="resetValues()">RESET</button>
+    
+                           </div>
+    
+                       </div>
+                </div>
+            
+        
+        <br>
+        <br>
+    
+        <div class="last-txt"><a href="https://datastudio.google.com/u/1/reporting/fd890c97-1455-4d87-ba43-d4067eb4f93c/page/OdPXC" target="_blank">View the live CBLV Project Showcase investment dashboard</a>
+    </div>
+    </form>
+    
+    
+    
+    
+    
+    
     </div>
     
-         <br>
-
-         <div class="submit_btn">
-            <button type="submit" class="btn-primary" id="btn-primary" >Submit Investment</button>
-    </div>
     
-    <br>
-    <br>
-
-    <div class="last-txt"><a href="https://datastudio.google.com/u/1/reporting/fd890c97-1455-4d87-ba43-d4067eb4f93c/page/OdPXC" target="_blank">View the live CBLV Project Showcase investment dashboard</a>
-</div>
-</form>
-</div>
-
-
-
-</div>    
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-
-<script>
+    
+    </div>    
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    
+    <script>
 
 document.getElementById('second').style.display = 'none';
 document.getElementById('third').style.display = 'none';
