@@ -422,7 +422,7 @@ function resetValues(){
        if(total !== 2000000 ){
         errorMessages.push('Amount should be equal to 2 Million');         
       }
-      }else{
+      else{
         fetch(form.action, {
           method : "POST",
           body: new FormData(document.getElementById("myForm")),
