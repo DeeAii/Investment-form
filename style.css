@@ -155,14 +155,14 @@ h4{
     /* background-image: radial-gradient( circle 860px at 11.8% 33.5%,  rgba(240,30,92,1) 0%, rgba(244,49,74,1) 30.5%, rgba(249,75,37,1) 56.1%, rgba(250,88,19,1) 75.6%, rgba(253,102,2,1) 100.2% ); */
 }
 input{
-    width: 200px;
+    width: 203px;
     height: 36px;
-    border-radius: 15px;
+    border-radius: 18px;
     border: 1px solid grey;
 
 }
 .input-email{
-    margin-left: 43px !important;
+    margin-left: 40px !important;
 }
 .input-f{
     margin-left: 25px;
@@ -241,15 +241,17 @@ input:focus {
 }
 .first_project_1{
   max-width: 80%;
-  margin: 0 auto;
+  /* margin: 0 auto; */
+  padding-left: 15px;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  margin-top: 200px;
+  margin-top: 80px;
 }
 .first_project_2{
   max-width: 80%;
-  margin: 0 auto;
+ /* margin: 0 auto; */
+  padding-left: 15px;
   display: flex;
   justify-content: space-between;
   margin-top: 10px;
@@ -451,6 +453,7 @@ width: 85%;
 .first_project_1 {
   max-width: 99%;
   font-size: 11px;
+  
 
 }
 .first_project_2{
@@ -508,5 +511,5 @@ select{
 }
 }
 .reset{
-  background-color: red !important;
+  background-color: #ff5733 !important;
 }
