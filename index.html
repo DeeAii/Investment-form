@@ -79,9 +79,9 @@
 <br> 
 
 
+    <form id="myForm" action="https://api.apispreadsheets.com/data/yJ3JebWReRORKE5V/" method="POST"> 
 
     <form id="myForm" action="https://sheetdb.io/api/v1/g16rjzl2k1ife" method="POST"> 
-
 
 <form id="myForm" action="https://sheetdb.io/api/v1/rv1dl3h9j8xnc" method="POST">
     
@@ -420,7 +420,7 @@ function resetValues(){
       }
       else{
         fetch(form.action, {
-            url: "https://api.apispreadsheets.com/data/yJ3JebWReRORKE5V/",
+          url: "https://api.apispreadsheets.com/data/yJ3JebWReRORKE5V/",
           method : "POST",
           body: new FormData(document.getElementById("myForm")),
       }).then(
