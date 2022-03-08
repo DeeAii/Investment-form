@@ -57,7 +57,7 @@
 <li>You may invest the $2M SERS in one to three different projects.</li>
 <li>You may not invest in your own project.</li>
 <li>You must invest all $2M SERS allocated to you (can’t be over or under).</li>
-<li>Acceptable amounts are integers from 1 to 2000000.</li>
+<li>Acceptable amounts are integers from 1 to 1000000.</li>
 <li>Do not include symbols, commas or decimals in the amount.</li>
 <li>Investments must be submitted during the class showcase</li>
 <li>Viiew the Artifact wall above to learn about the projects. </li>
@@ -372,21 +372,21 @@ document.getElementById('btn-primary').style.backgroundColor='lightgrey';
 function checkVal1(value){
           var f2 = document.getElementById('amountb');
           var f3 = document.getElementById('amountc');
-    if(value >= 0 && value <= 2000000){
+    if(value >= 0 && value <= 1000000){
               
           if(parseInt(f2.value) > 0){
             document.getElementById('first_project_1_2').innerHTML = parseInt(f2.value) + parseInt(value);
-            document.getElementById('first_project_2_2').innerHTML = 2000000 - parseInt(f2.value) - parseInt(value) ;
+            document.getElementById('first_project_2_2').innerHTML = 1000000 - parseInt(f2.value) - parseInt(value) ;
         
         }
           if(parseInt(f3.value) > 0){
             document.getElementById('first_project_1_2').innerHTML = parseInt(f2.value) +  parseInt(f3.value)  + parseInt(value);
-            document.getElementById('first_project_2_2').innerHTML = 2000000 - parseInt(f2.value) -  parseInt(f3.value) - parseInt(value);
+            document.getElementById('first_project_2_2').innerHTML = 1000000 - parseInt(f2.value) -  parseInt(f3.value) - parseInt(value);
           
         }
           else{
             document.getElementById('first_project_1_2').innerHTML = parseInt(value);
-            document.getElementById('first_project_2_2').innerHTML = 2000000 - parseInt(value);  
+            document.getElementById('first_project_2_2').innerHTML = 1000000 - parseInt(value);  
         }
 
         }
@@ -396,17 +396,17 @@ function checkVal1(value){
 }
 
 function checkVal2(value){
-    if(value >= 0 && value <= 2000000){
+    if(value >= 0 && value <= 1000000){
             var f1 = document.getElementById('amounta');
             var f3 = document.getElementById('amountc');
             if(parseInt(f1.value) > 0){
              document.getElementById('first_project_1_2').innerHTML = parseInt(f1.value) + parseInt(value);
-             document.getElementById('first_project_2_2').innerHTML = 2000000 - parseInt(f1.value) - parseInt(value);  
+             document.getElementById('first_project_2_2').innerHTML = 1000000 - parseInt(f1.value) - parseInt(value);  
          
             }
           if(parseInt(f3.value) > 0){
             document.getElementById('first_project_1_2').innerHTML = parseInt(f1.value) + parseInt(f3.value) + parseInt(value);
-            document.getElementById('first_project_2_2').innerHTML = 2000000 - parseInt(f1.value) - parseInt(f3.value) - parseInt(value);  
+            document.getElementById('first_project_2_2').innerHTML = 1000000 - parseInt(f1.value) - parseInt(f3.value) - parseInt(value);  
         
         }
     }
@@ -416,7 +416,7 @@ function checkVal2(value){
 }
 
 function checkVal3(value){
-    if(value >= 0 && value <= 2000000){
+    if(value >= 0 && value <= 1000000){
         var f1 = document.getElementById('amounta');
         var f2 = document.getElementById('amountb');
         // if(parseInt(f1.value) > 0){
@@ -426,7 +426,7 @@ function checkVal3(value){
         //     document.getElementById('first_project_1_2').innerHTML = parseInt(f1.value) + parseInt(f3.value) + parseInt(value);
         //   }
         document.getElementById('first_project_1_2').innerHTML = parseInt(f1.value)+ parseInt(f2.value) +parseInt(value);
-        document.getElementById('first_project_2_2').innerHTML = 2000000 - parseInt(f1.value)- parseInt(f2.value) -parseInt(value);  
+        document.getElementById('first_project_2_2').innerHTML = 1000000 - parseInt(f1.value)- parseInt(f2.value) -parseInt(value);  
    
     }
     else{
@@ -542,7 +542,7 @@ function resetValues(){
 
     }
         
-       if(total !== 2000000 ){
+       if(total !== 1000000 ){
         errorMessages.push('Amount should be equal to 2 Million');         
       }
       else{
