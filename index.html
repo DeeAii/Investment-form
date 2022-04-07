@@ -1,43 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-  <link rel="stylesheet" href="style.css">
-  <title>Showcase Tool</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Showcase Tool</title>
 </head>
-
 <body>
+    
+<div id="preloader"> 
 
- <!-- <div id="preloader">
-
-    <div id="loader">
-      <div class="sk-cube-grid">
-        <div class="sk-cube sk-cube1"></div>
-        <div class="sk-cube sk-cube2"></div>
-        <div class="sk-cube sk-cube3"></div>
-        <div class="sk-cube sk-cube4"></div>
-        <div class="sk-cube sk-cube5"></div>
-        <div class="sk-cube sk-cube6"></div>
-        <div class="sk-cube sk-cube7"></div>
-        <div class="sk-cube sk-cube8"></div>
-        <div class="sk-cube sk-cube9"></div>
+        <div id="loader">    
+        <div class="sk-cube-grid">
+    <div class="sk-cube sk-cube1"></div>
+    <div class="sk-cube sk-cube2"></div>
+    <div class="sk-cube sk-cube3"></div>
+    <div class="sk-cube sk-cube4"></div>
+    <div class="sk-cube sk-cube5"></div>
+    <div class="sk-cube sk-cube6"></div>
+    <div class="sk-cube sk-cube7"></div>
+    <div class="sk-cube sk-cube8"></div>
+    <div class="sk-cube sk-cube9"></div>
+    </div>
+        </div>
       </div>
-    </div> 
-  </div> -->
-  
-  <div class="main">
+<div class="main">
 
-    <div class="form-section">
+<div class="form-section">
 
-      <!--
+	<!--
 
 <h1 class="heading">TIM Investment Showcase</h1> 
 <img src="" class="center" >
@@ -78,265 +77,259 @@
 
 </div> -->
 
-      <br>
-      <br>
+<br>
+<br> 
 
 
-      <form id="myForm">
+    <form id="myForm" action="https://api.apispreadsheets.com/data/qbfCDUvmslGzOVHD/" method="POST"> 
+	<form id="myForm" action="https://sheetdb.io/api/v1/rv1dl3h9j8xnc" method="POST">
 
-
-
-
+    
+   
         <div class="container">
-          <div class="row">
-            <div class="col-sm-12 col-md-12 col-lg-6 text-email">
-              Enter registered email
+            <div class="row">
+                <div class="col-sm-12 col-md-12 col-lg-6 text-email">
+                    Enter registered email
+                </div>
+                <div class="col-sm-12 col-md-12 col-lg-6">
+                    <input name="data[email]" class='input-email' id="input_email" type="email" required>
+    
+                </div>
+    
             </div>
-            <div class="col-sm-12 col-md-12 col-lg-6">
-              <input name="data[email]" class='input-email' id="input_email" type="email" required>
-
-            </div>
-
-          </div>
         </div>
+    
+            <div class="container">
+                <div class="row pro1">
+                    <div class="col-sm-12 col-md-12 col-lg-6">
+                        
+                        <select class="" id="coya" name="data[projecta]" >
+                            <option value="">Select project from list</option>
 
-        <div class="container">
-          <div class="row pro1">
-            <div class="col-sm-12 col-md-12 col-lg-6">
-
-              <select class="" id="coya" name="data[projecta]">
-                <option value="">Select project from list</option>
-
-                <option value="BusinessPal">BusinessPal</option>
-                <option value="Tickle">Tickle</option>
-                <option value="LoadGrid">LoadGrid</option>
-                <option value="Meta Learning">Meta Learning</option>
-                <option value="Zentrum">Zentrum</option>
-                <option value="Vass Expressions">Vass Expressions</option>
-                <option value="Curatio">Curatio</option>
-                <option value="Old is Gold">Old is Gold</option>
-                <option value="iCook">iCook</option>
-                <option value="EatWell">EatWell</option>
-                <option value="Journey360">Journey360</option>
-                <option value="Pagar Health">Pagar Health</option>
-                <option value="Vridge">Vridge</option>
-                <option value="uCarrier">uCarrier</option>
-                <option value="Enabling Women Entrepreneurs">Enabling Women Entrepreneurs</option>
-                <option value="Impacta">Impacta</option>
-                <option value="InteRobot">InteRobot</option>
-                <option value="ReNew">ReNew</option>
+<option value="BusinessPal">BusinessPal</option>
+<option value="Tickle">Tickle</option>
+<option value="LoadGrid">LoadGrid</option>
+<option value="Meta Learning">Meta Learning</option>
+<option value="Zentrum">Zentrum</option>
+<option value="Vass Expressions">Vass Expressions</option>
+<option value="Curatio">Curatio</option>
+<option value="Old is Gold">Old is Gold</option>
+<option value="iCook">iCook</option>
+<option value="EatWell">EatWell</option>
+<option value="Journey360">Journey360</option>
+<option value="Pagar Health">Pagar Health</option>
+<option value="Vridge">Vridge</option>
+<option value="uCarrier">uCarrier</option>
+<option value="Enabling Women Entrepreneurs">Enabling Women Entrepreneurs</option>
+<option value="Impacta">Impacta</option>
+<option value="InteRobot">InteRobot</option>
+<option value="ReNew">ReNew</option>                  
 
 
-              </select>
+                            </select>
+                    </div>
+                    <div class="col-sm-12 col-md-12 col-lg-6 pro1-input-email">
+                   <i class="fa fa-usd" aria-hidden="true"></i>
+    
+                        <input type="number" min="0" id="amounta" onchange="checkVal1(this.value)" class="input-f" name="data[amounta]" step="10000" required>
+                    </div>
+                </div>
             </div>
-            <div class="col-sm-12 col-md-12 col-lg-6 pro1-input-email">
-              <i class="fa fa-usd" aria-hidden="true"></i>
+            
+           <div class="container" id="second">
+               <div class="row pro2">
+                   <div class="col-sm-12 col-md-12 col-lg-6">
+    
+                    <select id="coyb" name="data[projectb]" >
+                        <option value="">Select project from list</option>
+               
+<option value="BusinessPal">BusinessPal</option>
+<option value="Tickle">Tickle</option>
+<option value="LoadGrid">LoadGrid</option>
+<option value="Meta Learning">Meta Learning</option>
+<option value="Zentrum">Zentrum</option>
+<option value="Vass Expressions">Vass Expressions</option>
+<option value="Curatio">Curatio</option>
+<option value="Old is Gold">Old is Gold</option>
+<option value="iCook">iCook</option>
+<option value="EatWell">EatWell</option>
+<option value="Journey360">Journey360</option>
+<option value="Pagar Health">Pagar Health</option>
+<option value="Vridge">Vridge</option>
+<option value="uCarrier">uCarrier</option>
+<option value="Enabling Women Entrepreneurs">Enabling Women Entrepreneurs</option>
+<option value="Impacta">Impacta</option>
+<option value="InteRobot">InteRobot</option>
+<option value="ReNew">ReNew</option>
 
-              <input type="number" min="0" id="amounta" onchange="checkVal1(this.value)" class="input-f"
-                name="data[amounta]" step="10000" required>
+                        </select>
+                   </div>
+                   <div class="col-sm-12 col-md-12 col-lg-6 pro1-input-email">
+                   <i class="fa fa-usd" aria-hidden="true"></i>
+    
+                           <input type="number" min="0" onchange="checkVal2(this.value)" id="amountb" class="input-f" name="data[amountb]" step="10000" required>
+                   </div>
+               </div>
+           </div>
+           
+           
+           
+                <div class="container" id="third">
+                    <div class="row pro3">
+                        <div class="col-sm-12 col-md-12 col-lg-6">
+                            <select id="coyc" name="data[projectc]" >
+                            <option value="">Select project from list</option>
+           
+  <option value="BusinessPal">BusinessPal</option>
+<option value="Tickle">Tickle</option>
+<option value="LoadGrid">LoadGrid</option>
+<option value="Meta Learning">Meta Learning</option>
+<option value="Zentrum">Zentrum</option>
+<option value="Vass Expressions">Vass Expressions</option>
+<option value="Curatio">Curatio</option>
+<option value="Old is Gold">Old is Gold</option>
+<option value="iCook">iCook</option>
+<option value="EatWell">EatWell</option>
+<option value="Journey360">Journey360</option>
+<option value="Pagar Health">Pagar Health</option>
+<option value="Vridge">Vridge</option>
+<option value="uCarrier">uCarrier</option>
+<option value="Enabling Women Entrepreneurs">Enabling Women Entrepreneurs</option>
+<option value="Impacta">Impacta</option>
+<option value="InteRobot">InteRobot</option>
+<option value="ReNew">ReNew</option>
+                                </select>
+                        </div>
+                        <div class="col-sm-12 col-md-12 col-lg-6 pro1-input-email">
+                           <i class="fa fa-usd" aria-hidden="true"></i>
+    
+                            <input type="number" min="0" id="amountc"   onchange="checkVal3(this.value)" class="input-f" name="data[amountc]" step="10000" required >
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="plus_icon"  >
+                    <div class="plus_icon_box" onclick="addRow()"id="add_btn" >
+                        <i class="fa fa-plus"></i>
+                    </div>
+                 </div>
+        
+    
+                 <div class="first_project_1">
+                    <div class="first_project_1_1">
+                        Allocated amount
+                    </div>
+                    <div class="first_project_1_2" id="first_project_1_2">
+                       $ 0
+                    </div>
             </div>
-          </div>
+            <div class="first_project_2">
+                <div class="first_project_2_1">
+                  Remaining amount available for allocation
+                </div>
+                <div class="first_project_2_2" id="first_project_2_2">
+                   $ 1,000,000
+                </div>
         </div>
-
-        <div class="container" id="second">
-          <div class="row pro2">
-            <div class="col-sm-12 col-md-12 col-lg-6">
-
-              <select id="coyb" name="data[projectb]">
-                <option value="">Select project from list</option>
-
-                <option value="BusinessPal">BusinessPal</option>
-                <option value="Tickle">Tickle</option>
-                <option value="LoadGrid">LoadGrid</option>
-                <option value="Meta Learning">Meta Learning</option>
-                <option value="Zentrum">Zentrum</option>
-                <option value="Vass Expressions">Vass Expressions</option>
-                <option value="Curatio">Curatio</option>
-                <option value="Old is Gold">Old is Gold</option>
-                <option value="iCook">iCook</option>
-                <option value="EatWell">EatWell</option>
-                <option value="Journey360">Journey360</option>
-                <option value="Pagar Health">Pagar Health</option>
-                <option value="Vridge">Vridge</option>
-                <option value="uCarrier">uCarrier</option>
-                <option value="Enabling Women Entrepreneurs">Enabling Women Entrepreneurs</option>
-                <option value="Impacta">Impacta</option>
-                <option value="InteRobot">InteRobot</option>
-                <option value="ReNew">ReNew</option>
-
-              </select>
-            </div>
-            <div class="col-sm-12 col-md-12 col-lg-6 pro1-input-email">
-              <i class="fa fa-usd" aria-hidden="true"></i>
-
-              <input type="number" min="0" onchange="checkVal2(this.value)" id="amountb" class="input-f"
-                name="data[amountb]" step="10000" required>
-            </div>
-          </div>
-        </div>
-
-
-
-        <div class="container" id="third">
-          <div class="row pro3">
-            <div class="col-sm-12 col-md-12 col-lg-6">
-              <select id="coyc" name="data[projectc]">
-                <option value="">Select project from list</option>
-
-                <option value="BusinessPal">BusinessPal</option>
-                <option value="Tickle">Tickle</option>
-                <option value="LoadGrid">LoadGrid</option>
-                <option value="Meta Learning">Meta Learning</option>
-                <option value="Zentrum">Zentrum</option>
-                <option value="Vass Expressions">Vass Expressions</option>
-                <option value="Curatio">Curatio</option>
-                <option value="Old is Gold">Old is Gold</option>
-                <option value="iCook">iCook</option>
-                <option value="EatWell">EatWell</option>
-                <option value="Journey360">Journey360</option>
-                <option value="Pagar Health">Pagar Health</option>
-                <option value="Vridge">Vridge</option>
-                <option value="uCarrier">uCarrier</option>
-                <option value="Enabling Women Entrepreneurs">Enabling Women Entrepreneurs</option>
-                <option value="Impacta">Impacta</option>
-                <option value="InteRobot">InteRobot</option>
-                <option value="ReNew">ReNew</option>
-              </select>
-            </div>
-            <div class="col-sm-12 col-md-12 col-lg-6 pro1-input-email">
-              <i class="fa fa-usd" aria-hidden="true"></i>
-
-              <input type="number" min="0" id="amountc" onchange="checkVal3(this.value)" class="input-f"
-                name="data[amountc]" step="10000" required>
-            </div>
-          </div>
-        </div>
-
-        <div class="plus_icon">
-          <div class="plus_icon_box" onclick="addRow()" id="add_btn">
-            <i class="fa fa-plus"></i>
-          </div>
-        </div>
-
-
-        <div class="first_project_1">
-          <div class="first_project_1_1">
-            Allocated amount
-          </div>
-          <div class="first_project_1_2" id="first_project_1_2">
-            $ 0
-          </div>
-        </div>
-        <div class="first_project_2">
-          <div class="first_project_2_1">
-            Remaining amount available for allocation
-          </div>
-          <div class="first_project_2_2" id="first_project_2_2">
-            $ 1,000,000
-          </div>
-        </div>
-
-        <br>
-        <div class="container btn_wrapper">
-          <div class="row">
-            <div class="col-lg-6 col-md-12 col-sm-12 submit_btn">
-              <button type="submit" class="btn-primary" id="btn-primary">Submit Investment</button>
-
-            </div>
-            <div class="col-lg-6 col-md-12 col-sm-12">
-              <button type="button" class="btn-primary reset" onclick="resetValues()">RESET</button>
-
-            </div>
-
-          </div>
-        </div>
-
-
+        
+             <br>
+                <div class="container btn_wrapper">
+                       <div class="row">
+                           <div class="col-lg-6 col-md-12 col-sm-12 submit_btn">
+                            <button type="submit" class="btn-primary" id="btn-primary" >Submit Investment</button>
+    
+                           </div>
+                           <div class="col-lg-6 col-md-12 col-sm-12">
+                            <button type="button" class="btn-primary reset" onclick="resetValues()">RESET</button>
+    
+                           </div>
+    
+                       </div>
+                </div>
+            
+        
         <br>
         <br>
 
-
-
-        <div class="last-txt">
-          <p>
-            <center> <a
-                href="https://datastudio.google.com/u/1/reporting/fd890c97-1455-4d87-ba43-d4067eb4f93c/page/OdPXC"
-                target="_blank">View the CBLV Project Showcase investment leaderboard </a> </center>
-          </p>
-        </div>
-      </form>
-
-
-
-
-
-
+  
+    
+       <div class="last-txt"> <p> <center> <a href="https://datastudio.google.com/u/1/reporting/fd890c97-1455-4d87-ba43-d4067eb4f93c/page/OdPXC" target="_blank">View the CBLV Project Showcase investment leaderboard </a> </center> </p> 
     </div>
+    </form>
+    
+    
+    
+    
+    
+    
+    </div>
+    
+    
+    
+    </div>    
+<script
+		src="https://code.jquery.com/jquery-3.4.1.js"
+		integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+		crossorigin="anonymous"></script>
+    
+  
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 
+<script>
 
-
-  </div>
-  <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
-    crossorigin="anonymous"></script>
-
-
-  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-
-  <script>
-
-    document.getElementById('second').style.display = 'none';
-    document.getElementById('third').style.display = 'none';
-    var sum = 0;
-    document.getElementById('btn-primary').disabled = true;
-    document.getElementById('btn-primary').style.backgroundColor = 'lightgrey';
-    function checkVal1(value) {
-      var f2 = document.getElementById('amountb');
-      var f3 = document.getElementById('amountc');
-      if (value >= 0 && value <= 1000000) {
-
-        if (parseInt(f2.value) > 0) {
-          document.getElementById('first_project_1_2').innerHTML = parseInt(f2.value) + parseInt(value);
-          document.getElementById('first_project_2_2').innerHTML = 1000000 - parseInt(f2.value) - parseInt(value);
+document.getElementById('second').style.display = 'none';
+document.getElementById('third').style.display = 'none';
+var sum = 0;
+document.getElementById('btn-primary').disabled = true;
+document.getElementById('btn-primary').style.backgroundColor='lightgrey';
+function checkVal1(value){
+          var f2 = document.getElementById('amountb');
+          var f3 = document.getElementById('amountc');
+    if(value >= 0 && value <= 1000000){
+              
+          if(parseInt(f2.value) > 0){
+            document.getElementById('first_project_1_2').innerHTML = parseInt(f2.value) + parseInt(value);
+            document.getElementById('first_project_2_2').innerHTML = 1000000 - parseInt(f2.value) - parseInt(value) ;
+        
+        }
+          if(parseInt(f3.value) > 0){
+            document.getElementById('first_project_1_2').innerHTML = parseInt(f2.value) +  parseInt(f3.value)  + parseInt(value);
+            document.getElementById('first_project_2_2').innerHTML = 1000000 - parseInt(f2.value) -  parseInt(f3.value) - parseInt(value);
+          
+        }
+          else{
+            document.getElementById('first_project_1_2').innerHTML = parseInt(value);
+            document.getElementById('first_project_2_2').innerHTML = 1000000 - parseInt(value);  
+        }
 
         }
-        if (parseInt(f3.value) > 0) {
-          document.getElementById('first_project_1_2').innerHTML = parseInt(f2.value) + parseInt(f3.value) + parseInt(value);
-          document.getElementById('first_project_2_2').innerHTML = 1000000 - parseInt(f2.value) - parseInt(f3.value) - parseInt(value);
-
-        }
-        else {
-          document.getElementById('first_project_1_2').innerHTML = parseInt(value);
-          document.getElementById('first_project_2_2').innerHTML = 1000000 - parseInt(value);
-        }
-
-      }
-      else {
+        else{
         alert('You need to enter the value in range');
-      }
     }
+}
 
-    function checkVal2(value) {
-      if (value >= 0 && value <= 1000000) {
-        var f1 = document.getElementById('amounta');
-        var f3 = document.getElementById('amountc');
-        if (parseInt(f1.value) > 0) {
-          document.getElementById('first_project_1_2').innerHTML = parseInt(f1.value) + parseInt(value);
-          document.getElementById('first_project_2_2').innerHTML = 1000000 - parseInt(f1.value) - parseInt(value);
-
+function checkVal2(value){
+    if(value >= 0 && value <= 1000000){
+            var f1 = document.getElementById('amounta');
+            var f3 = document.getElementById('amountc');
+            if(parseInt(f1.value) > 0){
+             document.getElementById('first_project_1_2').innerHTML = parseInt(f1.value) + parseInt(value);
+             document.getElementById('first_project_2_2').innerHTML = 1000000 - parseInt(f1.value) - parseInt(value);  
+         
+            }
+          if(parseInt(f3.value) > 0){
+            document.getElementById('first_project_1_2').innerHTML = parseInt(f1.value) + parseInt(f3.value) + parseInt(value);
+            document.getElementById('first_project_2_2').innerHTML = 1000000 - parseInt(f1.value) - parseInt(f3.value) - parseInt(value);  
+        
         }
-        if (parseInt(f3.value) > 0) {
-          document.getElementById('first_project_1_2').innerHTML = parseInt(f1.value) + parseInt(f3.value) + parseInt(value);
-          document.getElementById('first_project_2_2').innerHTML = 1000000 - parseInt(f1.value) - parseInt(f3.value) - parseInt(value);
-
-        }
-      }
-      else {
+    }
+    else{
         alert('You need to enter the value in range');
-      }
     }
+}
 
-    function checkVal3(value) {
-      if (value >= 0 && value <= 1000000) {
+function checkVal3(value){
+    if(value >= 0 && value <= 1000000){
         var f1 = document.getElementById('amounta');
         var f2 = document.getElementById('amountb');
         // if(parseInt(f1.value) > 0){
@@ -345,69 +338,69 @@
         //   if(parseInt(f3.value) > 0){
         //     document.getElementById('first_project_1_2').innerHTML = parseInt(f1.value) + parseInt(f3.value) + parseInt(value);
         //   }
-        document.getElementById('first_project_1_2').innerHTML = parseInt(f1.value) + parseInt(f2.value) + parseInt(value);
-        document.getElementById('first_project_2_2').innerHTML = 1000000 - parseInt(f1.value) - parseInt(f2.value) - parseInt(value);
-
-      }
-      else {
-        alert('You need to enter the value in range');
-      }
+        document.getElementById('first_project_1_2').innerHTML = parseInt(f1.value)+ parseInt(f2.value) +parseInt(value);
+        document.getElementById('first_project_2_2').innerHTML = 1000000 - parseInt(f1.value)- parseInt(f2.value) -parseInt(value);  
+   
     }
-    document.getElementById('amountb').disabled = true;
-    document.getElementById('amountc').disabled = true;
+    else{
+        alert('You need to enter the value in range');
+    }
+}
+        document.getElementById('amountb').disabled = true;
+        document.getElementById('amountc').disabled = true;
     document.getElementById('coyb').disabled = true;
     document.getElementById('coyc').disabled = true;
 
-    var trigger = false;
-    function addRow() {
-      document.getElementById('second').style.display = 'block';
-      document.getElementById("add_btn").setAttribute("onclick", "addSecondRow()");
-      document.getElementById('amountb').disabled = false;
-      document.getElementById('coyb').disabled = false;
-      trigger = true
-    }
+var trigger = false;
+function addRow(){
+    document.getElementById('second').style.display = 'block';
+    document.getElementById("add_btn").setAttribute("onclick", "addSecondRow()");
+    document.getElementById('amountb').disabled = false;
+    document.getElementById('coyb').disabled = false;
+    trigger = true
+}
 
-    function addSecondRow() {
-      document.getElementById('third').style.display = 'block';
-      document.getElementById('amountc').disabled = false;
-      document.getElementById('coyc').disabled = false;
-    }
-
-
-
-    setInterval(function () {
-      var checkBtn = document.getElementById('first_project_2_2');
-      if (checkBtn.innerHTML == '0') {
-        document.getElementById('btn-primary').disabled = false;
-        document.getElementById('btn-primary').style.backgroundColor = '#ff5733';
-      }
-    },
-      10);
-    setInterval(function () {
-      var checkBtn = document.getElementById('first_project_2_2');
-      if (parseInt(checkBtn.innerHTML) > 0) {
-        document.getElementById('btn-primary').disabled = true;
-        document.getElementById('btn-primary').style.backgroundColor = 'lightgrey';
-      }
-    },
-      10);
+function addSecondRow() {
+        document.getElementById('third').style.display = 'block';
+        document.getElementById('amountc').disabled = false;
+        document.getElementById('coyc').disabled = false;
+}
 
 
-    function resetValues() {
-      document.getElementById('amounta').value = 0;
-      document.getElementById('amountb').value = 0;
-      document.getElementById('amountc').value = 0;
-      document.getElementById('input_email').value = '';
 
-      document.getElementById('first_project_1_2').innerHTML = '$ 0';
-      document.getElementById('first_project_2_2').innerHTML = '$ 2,000,000';
-      document.getElementById('btn-primary').disabled = true;
-      document.getElementById('btn-primary').style.backgroundColor = 'grey';
+setInterval(function(){
+var checkBtn = document.getElementById('first_project_2_2');
+ if(checkBtn.innerHTML == '0'){
+    document.getElementById('btn-primary').disabled = false;
+    document.getElementById('btn-primary').style.backgroundColor='#ff5733';
+ }
+     },
+10);
+setInterval(function(){
+var checkBtn = document.getElementById('first_project_2_2');
+ if(parseInt (checkBtn.innerHTML) > 0){
+    document.getElementById('btn-primary').disabled = true;
+document.getElementById('btn-primary').style.backgroundColor='lightgrey';
+ }
+     },
+10);
+           
 
-    }
+function resetValues(){
+    document.getElementById('amounta').value = 0;
+    document.getElementById('amountb').value = 0;
+    document.getElementById('amountc').value = 0;
+    document.getElementById('input_email').value = '';
+
+    document.getElementById('first_project_1_2').innerHTML = '$ 0';
+   document.getElementById('first_project_2_2').innerHTML = '$ 2,000,000';
+   document.getElementById('btn-primary').disabled = true;
+    document.getElementById('btn-primary').style.backgroundColor='grey';
+
+}
     var form = document.getElementById('myForm');
-
-    form.addEventListener("submit", e => {
+   
+     form.addEventListener("submit", e => {
       e.preventDefault();
 
       var firstProjectSelectOption = document.getElementById('coya').value;
@@ -416,106 +409,85 @@
       var val1 = document.getElementById('amounta').value;
       var val2 = document.getElementById('amountb').value;
       var val3 = document.getElementById('amountc').value;
-      var total = Number(val1) + Number(val2) + Number(val3);
-
-      var projectValues = [secondProjectSelectOption, thirdProjectSelectOption];
+      var total = Number(val1)+ Number(val2)+ Number(val3);
+    
+      var projectValues = [secondProjectSelectOption,thirdProjectSelectOption];
 
 
       var projectValueAlreadyExists = false;
       var errorMessages = [];
 
-      if (trigger === true) {
-        if (firstProjectSelectOption === secondProjectSelectOption || secondProjectSelectOption === firstProjectSelectOption) {
+      if(trigger === true){
+        if (firstProjectSelectOption === secondProjectSelectOption || secondProjectSelectOption === firstProjectSelectOption){
           alert(`${firstProjectSelectOption} can not be selected twice`);
           return false;
-        }
-        if (secondProjectSelectOption === thirdProjectSelectOption || thirdProjectSelectOption === secondProjectSelectOption) {
+      }
+      if (secondProjectSelectOption === thirdProjectSelectOption || thirdProjectSelectOption === secondProjectSelectOption){
           alert(`${secondProjectSelectOption} can not be selected twice`)
           return false;
-
+      
         }
-        if (firstProjectSelectOption === thirdProjectSelectOption || thirdProjectSelectOption === firstProjectSelectOption) {
+      if (firstProjectSelectOption === thirdProjectSelectOption || thirdProjectSelectOption === firstProjectSelectOption){
           alert(`${firstProjectSelectOption} can not be selected twice`)
           return false;
-
+      
         }
       }
 
+     
+    
+      var val3Check = document.getElementById('amountc').disabled ;
+      var val2Check = document.getElementById('amountb').disabled ;
 
-
-      var val3Check = document.getElementById('amountc').disabled;
-      var val2Check = document.getElementById('amountb').disabled;
-
-      if (firstProjectSelectOption == "") {
+      if ( firstProjectSelectOption == "") {
         alert('you have not selected the first project name');
         return false;
-      }
-      if (val2Check == false && secondProjectSelectOption == "") {
+    }
+    if (val2Check  == false &&  secondProjectSelectOption == "") {
         alert('you have not selected the second project name');
         return false;
 
-      }
-
-      if (val3Check == false && thirdProjectSelectOption == "") {
+    }
+       
+    if (val3Check == false && thirdProjectSelectOption == "") {
         alert('you have not selected the third project name');
         return false;
 
+    }
+        
+       if(total !== 1000000 ){
+        errorMessages.push('Amount should be equal to 2 Million');         
       }
-
-      if (total !== 1000000) {
-        errorMessages.push('Amount should be equal to 1 Million');
-      }
-      else {
-        const url = `https://script.google.com/macros/s/AKfycbyPjqCgjSEOteCRz_t0-8lyFGty7A0hIZsZIcqtw8kJjM919wsrJLjlTzpxfYjYDLQ5sw/exec`;
-
-        try {
-          const response = await fetch(url, {
-            method: 'POST',
-            mode: 'no-cors',
-            headers: {
-              Accept: 'application/json',
-              'Content-Type': 'application/json'
-            },
-            body: new FormData(document.getElementById("myForm")),
-          });
-          if (response.ok) {
-            console.log(response);
-            document.getElementById('amounta').value = 0;
-            document.getElementById('amountb').value = 0;
-            document.getElementById('amountc').value = 0;
-            document.getElementById('input_email').value = '';
-            document.getElementById('first_project_1_2').innerHTML = '$ 0';
-            document.getElementById('first_project_2_2').innerHTML = '$ 1,000,000'
-            window.location.href = "https://timg5201.notion.site/Thank-you-for-investing-ff88697fbd39446f9c22b78214b31688";
-          }
-        } catch (error) {
-          console.log('Error while submitting form', error);
-        }
-
+      else{
+        fetch(form.action, {
+          method : "POST",
+          body: new FormData(document.getElementById("myForm")),
+      }).then(
+          response => response.json()
+      ).then((html) => {
+          // alert('Data has been submitted')
+          document.getElementById('amounta').value = 0;
+          document.getElementById('amountb').value = 0;
+          document.getElementById('amountc').value = 0;
+          document.getElementById('input_email').value = '';
+          document.getElementById('first_project_1_2').innerHTML = '$ 0';
+          document.getElementById('first_project_2_2').innerHTML = '$ 2,000,000'
+        window.location.href="https://timg5201.notion.site/Thank-you-for-investing-ff88697fbd39446f9c22b78214b31688";
+      });
       }
     });
-
-
-    $(window).on('load', function () { // makes sure the whole site is loaded 
-      setTimeout(function () { 
-        const loader = document.getElementById('loader')
-        const preloader = document.getElementById('preloader')
-        const body = document.getElementsByTagName('body')[0]
-         loader.style.display = 'none'
-         preloader.style.display ='none'
-         body.style.overflow = 'visible'
-
-       }, 1000);
-
-    })
-
+    
+    function showSite(){
+        $('#loader').fadeOut(); // will first fade out the loading animation 
+        $('#preloader').delay(60).fadeOut('slow'); // will fade out the white DIV that covers the website. 
+        $('body').delay(60).css({'overflow':'visible'});
+  }
+      $(window).on('load', function() { // makes sure the whole site is loaded 
+      setTimeout(function(){ showSite() }, 1000);
+      })
+            
   </script>
-
-
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
-
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 </body>
-
 </html>
