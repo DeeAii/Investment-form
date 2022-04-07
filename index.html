@@ -81,8 +81,8 @@
 <br> 
 
 
-    <form id="myForm" action="https://api.apispreadsheets.com/data/qbfCDUvmslGzOVHD/" method="POST"> 
-	<form id="myForm" action="https://sheetdb.io/api/v1/rv1dl3h9j8xnc" method="POST">
+	<form id="myForm">
+
 
     
    
@@ -456,24 +456,35 @@ function resetValues(){
     }
         
        if(total !== 1000000 ){
-        errorMessages.push('Amount should be equal to 2 Million');         
+        errorMessages.push('Amount should be equal to 1 Million');         
       }
       else{
-        fetch(form.action, {
-          method : "POST",
+	 const url = `https://script.google.com/macros/s/AKfycbyPjqCgjSEOteCRz_t0-8lyFGty7A0hIZsZIcqtw8kJjM919wsrJLjlTzpxfYjYDLQ5sw/exec`;
+
+        try {
+          const response = await fetch(url, {
+            method: 'POST',
+            mode: 'no-cors',
+            headers: {
+              Accept: 'application/json',
+              'Content-Type': 'application/json'
+            },
           body: new FormData(document.getElementById("myForm")),
-      }).then(
-          response => response.json()
-      ).then((html) => {
-          // alert('Data has been submitted')
-          document.getElementById('amounta').value = 0;
+          });
+          if (response.ok) {
+            console.log(response);
+		document.getElementById('amounta').value = 0;
           document.getElementById('amountb').value = 0;
           document.getElementById('amountc').value = 0;
           document.getElementById('input_email').value = '';
           document.getElementById('first_project_1_2').innerHTML = '$ 0';
-          document.getElementById('first_project_2_2').innerHTML = '$ 2,000,000'
+          document.getElementById('first_project_2_2').innerHTML = '$ 1,000,000'
         window.location.href="https://timg5201.notion.site/Thank-you-for-investing-ff88697fbd39446f9c22b78214b31688";
-      });
+          }
+        } catch (error) {
+          console.log('Error while submitting form', error);
+        }
+     
       }
     });
     
@@ -487,7 +498,11 @@ function resetValues(){
       })
             
   </script>
+	
+	
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+	
+	
 
 </body>
 </html>
